@@ -1,0 +1,14 @@
+# The Prefix for each Rank is the Prefix set in LuckPerms
+# To set player color set meta tag "CustomTablistPlayerColor" followed by color code (e.g. &6) in LuckPerms
+# Available Tags: %TPS%
+
+Tablist:
+  Header:
+    - "example text"
+    - "example info"
+
+  Footer:
+    - "example text"
+    - "example info"
+
+  RefreshRate: 20 #in Seconds
