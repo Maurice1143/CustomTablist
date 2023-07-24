@@ -11,11 +11,13 @@ public class RankCreateListener {
         API.getEventBus().subscribe(Main.getInstance(), GroupCreateEvent.class, e -> {
             TablistManager.getInstance().refreshTeams(true);
             TablistManager.getInstance().refreshAllPlayerTeams();
+            TablistManager.getInstance().calculateRankPriority();
         });
 
         API.getEventBus().subscribe(Main.getInstance(), GroupDeleteEvent.class, e -> {
             TablistManager.getInstance().refreshTeams(true);
             TablistManager.getInstance().refreshAllPlayerTeams();
+            TablistManager.getInstance().calculateRankPriority();
         });
     }
 }

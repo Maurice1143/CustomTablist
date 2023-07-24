@@ -1,12 +1,15 @@
 name: CustomTablist
 version: '${project.version}'
 main: de.exoworld.customtablist.Main
-authors: [Maurice]
+authors: [Maurice_009]
 description: Simple Tablist plugin
 website: https://www.eXo-world.de
 api-version: 1.19
 
-depend: [LuckPerms]
+depend:
+  - LuckPerms
+softdepend:
+  - PlaceholderAPI
 
 commands:
   customtablist:

@@ -1,6 +1,10 @@
 # The Prefix for each Rank is the Prefix set in LuckPerms
 # To set player color set meta tag "CustomTablistPlayerColor" followed by color code (e.g. &6) in LuckPerms
-# Available Tags: %TPS%
+
+# Available Tags: %TPS%.
+# You can also use the PlaceholderAPIs tags.
+
+# To switch between texts in one line at the given refresh rate use '::' to define multiple texts.
 
 Tablist:
   Header:
@@ -11,4 +15,6 @@ Tablist:
     - "example text"
     - "example info"
 
-  RefreshRate: 20 #in Seconds
+  RefreshRate: 3 #in Seconds
+
+  SwitchTextsTime: 20 #in Seconds

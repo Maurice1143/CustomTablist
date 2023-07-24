@@ -11,12 +11,14 @@ public class Settings {
     private static List<String> headerList = new ArrayList<>();
     private static List<String> footerList = new ArrayList<>();
     private static int refreshRate;
+    private static int switchTextsTime;
     public Settings() {
         Main.getInstance().saveDefaultConfig();
         config = Main.getInstance().getConfig();
         headerList = config.getStringList("Tablist.Header");
         footerList = config.getStringList("Tablist.Footer");
-        refreshRate = config.getInt("Tablist.RefreshRate");
+        refreshRate = config.getInt("Tablist.RefreshRate", 3);
+        switchTextsTime = config.getInt("Tablist.SwitchTextsTime", 30);
     }
 
 
@@ -31,6 +33,9 @@ public class Settings {
     public static int getRefreshRate() {
         return refreshRate;
     }
+    public static int getSwitchTextsTime() {
+        return switchTextsTime;
+    }
 
     public void reloadSettings() {
         Main.getInstance().reloadConfig();
@@ -38,7 +43,8 @@ public class Settings {
 
         headerList = config.getStringList("Tablist.Header");
         footerList = config.getStringList("Tablist.Footer");
-        refreshRate = config.getInt("Tablist.RefreshRate", 10);
+        refreshRate = config.getInt("Tablist.RefreshRate", 30);
+        switchTextsTime = config.getInt("Tablist.SwitchTextsTime", 3);
 
         TablistManager.getInstance().refreshAll();
         TablistManager.getInstance().restartTimer();

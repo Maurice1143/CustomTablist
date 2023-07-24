@@ -26,7 +26,7 @@ public final class Main extends JavaPlugin {
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
-
+        
         //tryToHookIntoPlugins();
 
         pluginManager = getServer().getPluginManager();
