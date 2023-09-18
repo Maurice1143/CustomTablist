@@ -24,7 +24,7 @@ public class TablistManager {
     private List<String> footerStringList = Settings.getFooterList();
     private String headerString = Utils.convertListToStringWithNewLine(headerStringList);
     private String footerString = Utils.convertListToStringWithNewLine(footerStringList);
-    private final Map<String, String> rankDing = new HashMap<>();
+    private final Map<String, Integer> rankDing = new HashMap<>();
     private final Map<String, Map<Integer, List<String>>> multiTexts = new HashMap<>();
     public TablistManager() {
         tablistManagerInstance = this;
@@ -103,7 +103,7 @@ public class TablistManager {
         for (Group group : allGroups) {
             count++;
             String name = group.getName();
-            String priority = "0" + count;
+            int priority = 10 + count;
 
             rankDing.put(name, priority);
         }
